@@ -1,0 +1,57 @@
+.box {
+    /* 让一个元素在网页水平垂直居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* (从第4象限开始计算)x轴左偏移50%，y轴上偏移50%,由width和height决定具体的偏移大小*/
+    transform: translate(-50%,-50%);
+}
+
+#TextBox1, #TextBox2 {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 810px;
+}
+
+#Button1 {
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    font-size: 20px;
+    color: black;
+    /* 设置圆的半径大小，这个圆的四分之一的圆弧会代替边框的4个角落 
+    			设置为50%即是正圆
+    */
+    border-radius: 20px;
+    transform: translate(50px,0px);
+}
+
+label {
+    font-size: 30px;
+    color: yellow;
+}
+
+#HyperLink1 {
+    text-decoration: none;
+    font-size: 20px;
+    color: greenyellow;
+}
+
+#Label1 {
+    font-size: 50px;
+    color: red;
+}
+
+h1 {
+    color: greenyellow;
+}

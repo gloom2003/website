@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 810px;
+}
+
+#Panel1 {
+    /* 让一个元素在网页水平垂直居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* (从第4象限开始计算)x轴左偏移50%，y轴上偏移50%,由width和height决定具体的偏移大小*/
+    transform: translate(-50%,-50%);
+}
+
+#Label1 {
+    font-size: 30px;
+    color: red;
+}
+#HyperLink1, #HyperLink2 {
+    font-size: 25px;
+    color: yellow;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#Button1 {
+    font-size: 25px;
+    margin-left: 50px;
+    margin-right:50px;
+}

@@ -77,18 +77,16 @@
 		  <div id="Logo"><img src="images/logo.png" width="218" height="71" /></div>
 		  <div id="Nav">
 			<ul>
-			  <li><a href="#">登录界面</a></li>
-			  <li><a href="Reg.aspx">注册界面</a></li>
-			  <li><a href="#">新闻展示</a></li>
-			  <li><a href="#">在线答题</a></li>
-			  <li><a href="#">后台管理</a></li>
-			  <li><a href="#">新闻发布</a></li>
-			  <li><a href="#">对外交流</a></li>
-			  <li><a href="#">专题网站</a></li>
+			  <li><a href="showNews.aspx">新闻展示</a></li>
+			  <li><a href="testOnline.aspx">在线答题</a></li>
+			  <li><a href="adminManage.aspx">后台管理</a></li>
+			  <li><a href="issueNews.aspx">发布新闻</a></li>
+			  <li><a href="animation.aspx">观看动画</a></li>
+			  <li><a href="index.aspx">返回首页</a></li>
+			  <li><a href="#">留下足迹</a></li>
 			</ul>
 		  </div>
 
-		  <div id="Pic">此处显示  id "Pic" 的内容</div>
 
 		  <div id="Txt"> 
 			  <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
@@ -98,9 +96,7 @@
 		  </div>
 
 
-		  <div id="Foot">此处显示  id "Foot" 的内容00000000000000000000000000000
-
-		  </div>
+		
 
 	</div>
         

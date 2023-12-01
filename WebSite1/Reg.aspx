@@ -1,29 +1,42 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Reg.aspx.cs" Inherits="Reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Reg.aspx.cs" Inherits="Reg" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" GroupingText="用户注册">
-        账号：<asp:TextBox ID="TextBox1" runat="server" AutoPostBack="True" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="不能为空！" ControlToValidate="TextBox1" Display="Dynamic"></asp:RequiredFieldValidator>
-        <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>
-        <br />
-        <br />
-        密码：<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="不能为空！" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
-        <br />
-        <br />
-        密码：<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="不能为空！" ControlToValidate="TextBox3" Display="Dynamic"></asp:RequiredFieldValidator>
-        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="两次密码不一致" ControlToCompare="TextBox2" ControlToValidate="TextBox3"></asp:CompareValidator>
-        <br />
-        <br />
-        <asp:Button ID="Button1" runat="server" Text="用户注册" OnClick="Button1_Click" />
-        <br />
-        <br />
-        <asp:Label ID="Label1" runat="server"></asp:Label>
-        <br />
-        <br />
-    </asp:Panel>
-</asp:Content>
+<!DOCTYPE html>
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>注册界面</title>
+    <link rel="stylesheet" href="css/Reg.css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <img src="img/pexels-photo-2286895.jpeg"/>
+        <div class="box">
+            <h1>输入用户名与密码进行注册：</h1>
+            <br />
+            <br />
+            <label>用户名：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <asp:TextBox ID="TextBox1" runat="server" AutoPostBack="True" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server"></asp:Label>
+            <br />
+            <br />
+            <label>密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <label>确认密码：</label>
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="点我注册" />
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">
+                已经有账号了?点击我去登录</asp:HyperLink>
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+        </div>
+    </form>
+</body>
+</html>
