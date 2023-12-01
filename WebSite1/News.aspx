@@ -6,79 +6,22 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-#Main {
-	margin: auto;
-	width: 800px;
-}
-#Logo {
-	height: 80px;
-	width: 800px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-#Nav {
-	height: 40px;
-	width: 800px;
-	margin-bottom: 10px;
-}
-#Pic {
-	height: 200px;
-	width: 800px;
-	margin-bottom: 10px;
-	background-color: #CCC;
-}
-#Txt {
-	width: 800px;
-	margin-bottom: 10px;
-}
-#Foot {
-	height: 90px;
-	width: 800px;
-	background-color: #666;
-}
-#Main #Nav ul {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-}
-#Main #Nav ul li {
-	height: 40px;
-	width: 100px;
-	float: left;
-	font-family: "微软雅黑";
-	font-size: 16px;
-	line-height: 40px;
-	text-align: center;
-	background-color: #8C0000;
-	color: #FFF;
-}
-#Main #Nav ul li:hover {
-	color: #8C0000;
-	background-color: #FFF;
-}
-#Main #Nav ul li a {
-	color: #FFF;
-	text-decoration: none;
-	display: block;
-}
-#Main #Nav ul li a:hover {
-	color: #8C0000;
-}
-.auto-style1 {
-    width: 800px;
-}
-.auto-style2 {
-    text-align: center; 
-}
-/*
+	<link rel="stylesheet" href="css/directory.css"/>
+	<style>
+		.auto-style1 {
+			width: 800px;
+		}
+		.auto-style2 {
+			text-align: center; 
+		}
+		/*
     	.content{
 			width:850px;
 			height:100%;
 			background:rgb(129, 129, 123);
     	}
-	*/
-</style>
+		*/
+	</style>
 
 </head>
 <body>

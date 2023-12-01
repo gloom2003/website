@@ -10,13 +10,11 @@ public partial class AddNews : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        /*
-        if (Session["us"] == null)
+        if (Session["user"] == null)
         {
             Session["isLogin"] = "false";
             Response.Redirect("Login.aspx");
         }
-        */
     }
 
 }

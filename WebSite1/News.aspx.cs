@@ -10,6 +10,11 @@ public partial class News : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["user"] == null)
+        {
+            Session["isLogin"] = "false";
+            Response.Redirect("Login.aspx");
+        }
         String id = Request.QueryString["QQ"].ToString();
         string sql = "select * from News where ID='"+id+"'";
         string txt = "server=localhost;database=abc2023;uid=sa;pwd=123456";

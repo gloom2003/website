@@ -7,70 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <script src="Admin/My97DatePicker/WdatePicker.js"></script>
-
-     <style type="text/css">
-#Main {
-	margin: auto;
-	width: 800px;
-}
-#Logo {
-	height: 80px;
-	width: 800px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-#Nav {
-	height: 40px;
-	width: 800px;
-	margin-bottom: 10px;
-}
-#Pic {
-	height: 200px;
-	width: 800px;
-	margin-bottom: 10px;
-	background-color: #CCC;
-}
-#Txt {
-	width: 800px;
-	margin-bottom: 10px;
-}
-#Foot {
-	height: 90px;
-	width: 800px;
-	background-color: #666;
-}
-#Main #Nav ul {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-}
-#Main #Nav ul li {
-	height: 40px;
-	width: 100px;
-	float: left;
-	font-family: "微软雅黑";
-	font-size: 16px;
-	line-height: 40px;
-	text-align: center;
-	background-color: #8C0000;
-	color: #FFF;
-}
-#Main #Nav ul li:hover {
-	color: #8C0000;
-	background-color: #FFF;
-}
-#Main #Nav ul li a {
-	color: #FFF;
-	text-decoration: none;
-	display: block;
-}
-#Main #Nav ul li a:hover {
-	color: #8C0000;
-}
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/directory.css"/>
 
     <link rel="stylesheet" href="Admin/kindeditor/themes/default/default.css"/>
     
@@ -100,50 +37,40 @@
 			prettyPrint();
 		});
 	</script>
+    <style>
+        #bottomText{
+            position:absolute;
+            bottom:10px;
+            left: 300px;
+            text-align:center;
+            background-color: #666;
+        }
+    </style>
 
 </head>
 <body>
     <form id="form1" runat="server">
+
         <div id="Main">
-  <div id="Logo"><img src="../images/logo.png" width="218" height="71" /></div>
-  <div id="Nav">
-    <ul>
-      <li><a href="#">学校概况</a></li>
-      <li><a href="#">机构设置</a></li>
-      <li><a href="#">招生就业</a></li>
-      <li><a href="#">人事师资</a></li>
-      <li><a href="#">教学科研</a></li>
-      <li><a href="#">信息公开</a></li>
-      <li><a href="#">对外交流</a></li>
-      <li><a href="#">专题网站</a></li>
-    </ul>
-  </div>
-  <div id="Pic">此处显示  id "Pic" 的内容</div>
+
+          <div id="Logo"><img src="../images/logo.png" width="218" height="71" /></div>
+
+		  <div id="Nav">
+			<ul>
+			  <li><a href="showNews.aspx">新闻展示</a></li>
+			  <li><a href="testOnline.aspx">在线答题</a></li>
+			  <li><a href="adminManage.aspx">后台管理</a></li>
+			  <li><a href="issueNews.aspx">发布新闻</a></li>
+			  <li><a href="animation.aspx">观看动画</a></li>
+			  <li><a href="index.aspx">返回首页</a></li>
+			  <li><a href="#">留下足迹</a></li>
+			</ul>
+		  </div>
+
 
   <div id="Txt"> 
       <table align="left" class="auto-style1">
           <tr>
-              <td style="width: 140px; vertical-align: top;">
-                  <asp:TreeView ID="TreeView1" runat="server" ShowLines="True">
-                      <Nodes>
-                          <asp:TreeNode Text="用户管理" Value="用户管理">
-                              <asp:TreeNode NavigateUrl="~/Admin/S_User.aspx" Text="信息查询" Value="信息查询"></asp:TreeNode>
-                              <asp:TreeNode NavigateUrl="~/Admin/E_User.aspx" Text="信息编辑" Value="信息编辑"></asp:TreeNode>
-                          </asp:TreeNode>
-                          <asp:TreeNode Text="学校概况" Value="学校概况">
-                              <asp:TreeNode Text="发布信息" Value="发布信息"></asp:TreeNode>
-                              <asp:TreeNode Text="查询信息" Value="查询信息"></asp:TreeNode>
-                              <asp:TreeNode Text="编辑信息" Value="编辑信息"></asp:TreeNode>
-                          </asp:TreeNode>
-                          <asp:TreeNode Text="新建节点" Value="新建节点"></asp:TreeNode>
-                          <asp:TreeNode Text="新建节点" Value="新建节点"></asp:TreeNode>
-                          <asp:TreeNode Text="新建节点" Value="新建节点"></asp:TreeNode>
-                          <asp:TreeNode Text="新建节点" Value="新建节点"></asp:TreeNode>
-                          <asp:TreeNode Text="新建节点" Value="新建节点"></asp:TreeNode>
-                          <asp:TreeNode Text="新建节点" Value="新建节点"></asp:TreeNode>
-                      </Nodes>
-                  </asp:TreeView>
-                  </td>
               <td style="vertical-align: top">
 
 
@@ -177,7 +104,16 @@
 &nbsp;</div>
 
 
-  <div id="Foot">此处显示  id "Foot" 的内容00000000000000000000000000000</div>
+              <div id="bottomText">
+                  <p>
+                    版权所有©五邑大学   地址：广东省江门市蓬江区迎宾大道中99号   邮编：529020  
+                  </p> 
+                  <p>
+                    五邑大学党政办：(0750)3296113  传真：(0750)3358395    招生咨询  全日制本科招生咨询：(0750)3296263 
+                  </p>
+                  当前在线人数：?人  
+              
+              </div>
 </div>
         
     </form>

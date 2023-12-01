@@ -15,6 +15,12 @@ public partial class admin : System.Web.UI.Page
             Label3.Text = "欢迎" + Session["us"].ToString() + "用户进行在线考试！";
             Label4.Text = "现在时间为：" + DateTime.Now.ToString();
         }
+        else {
+
+                Session["isLogin"] = "false";
+                Response.Redirect("Login.aspx");
+            
+        }
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {

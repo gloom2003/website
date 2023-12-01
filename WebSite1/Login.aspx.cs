@@ -12,6 +12,8 @@ public partial class Login : System.Web.UI.Page
     {
         if ("false".Equals(Session["isLogin"])) {
             Label1.Text = "没有登录，不能访问其他页面！";
+        } else if ("false".Equals(Session["isAdmin"])) {
+            Label1.Text = "只有使用管理员账号才能够使用后台管理功能！";
         }
     }
 
@@ -36,10 +38,13 @@ public partial class Login : System.Web.UI.Page
         SqlDataReader sdr = cmd.ExecuteReader();//返回查询结果，并存储到Reader对象
         if (sdr.HasRows)
         {
-            Session["us"] = user;// 向session中存储用户信息
-            Session["pd"] = pwd;
+            Session["user"] = user;// 向session中存储用户信息
+            Session["password"] = pwd;
             Session["isLogin"] = "true";
-            Response.Redirect("AddNews.aspx");
+            if ("admin".Equals(user)) {
+                Session["isAdmin"] = "true";
+            }
+            Response.Redirect("index.aspx");
         }
         else
         {
