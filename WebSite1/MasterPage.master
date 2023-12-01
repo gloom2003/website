@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+#Main {
+	margin: auto;
+	width: 800px;
+}
+#Logo {
+	height: 80px;
+	width: 800px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#Nav {
+	height: 40px;
+	width: 800px;
+	margin-bottom: 10px;
+}
+#Pic {
+	height: 200px;
+	width: 800px;
+	margin-bottom: 10px;
+	background-color: #CCC;
+}
+#Txt {
+	width: 800px;
+	margin-bottom: 10px;
+}
+#Foot {
+	height: 90px;
+	width: 800px;
+	background-color: #666;
+}
+#Main #Nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#Main #Nav ul li {
+	height: 40px;
+	width: 100px;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #8C0000;
+	color: #FFF;
+}
+#Main #Nav ul li:hover {
+	color: #8C0000;
+	background-color: #FFF;
+}
+#Main #Nav ul li a {
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+}
+#Main #Nav ul li a:hover {
+	color: #8C0000;
+}
+</style>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Main">
+		  <div id="Logo"><img src="images/logo.png" width="218" height="71" /></div>
+		  <div id="Nav">
+			<ul>
+			  <li><a href="#">登录界面</a></li>
+			  <li><a href="Reg.aspx">注册界面</a></li>
+			  <li><a href="#">新闻展示</a></li>
+			  <li><a href="#">在线答题</a></li>
+			  <li><a href="#">后台管理</a></li>
+			  <li><a href="#">新闻发布</a></li>
+			  <li><a href="#">对外交流</a></li>
+			  <li><a href="#">专题网站</a></li>
+			</ul>
+		  </div>
+
+		  <div id="Pic">此处显示  id "Pic" 的内容</div>
+
+		  <div id="Txt"> 
+			  <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+			  </asp:ContentPlaceHolder>
+
+		  </div>
+
+
+		  <div id="Foot">此处显示  id "Foot" 的内容00000000000000000000000000000
+
+		  </div>
+
+	</div>
+        
+        
+      
+    </form>
+</body>
+</html>
