@@ -44,6 +44,16 @@ public partial class Admin_E_User : System.Web.UI.Page
         }
     }
 
+    protected void GridViewUsers_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "Add")
+        {
+            Response.Redirect("../Reg.aspx");
+        }
+       
+    }
+
+
     protected void GridViewUsers_RowEditing(object sender, GridViewEditEventArgs e)
     {
         GridViewUsers.EditIndex = e.NewEditIndex;

@@ -115,9 +115,6 @@
                               <asp:TreeNode NavigateUrl="~/adminManage.aspx" Text="查询用户" Value="查询用户"></asp:TreeNode>
                               <asp:TreeNode NavigateUrl="~/Admin/editUser.aspx" Text="编辑用户" Value="编辑用户"></asp:TreeNode>
                           </asp:TreeNode>
-                          <asp:TreeNode Text="新闻管理" Value="新闻管理">
-                              <asp:TreeNode Text="编辑新闻" Value="编辑新闻"></asp:TreeNode>
-                          </asp:TreeNode>
                       </Nodes>
                   </asp:TreeView>
                   </td>
