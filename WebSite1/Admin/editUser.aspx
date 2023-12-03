@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="adminManage.aspx.cs" Inherits="I_News1" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="editUser.aspx.cs" Inherits="Admin_E_User" %>
 
 <!DOCTYPE html>
 
@@ -123,14 +123,50 @@
                   </td>
           </tr>
       </table>
-	   <h2 id="title">用户数据</h2>
 	   <div class="users">
-            <asp:GridView ID="GridViewUsers" runat="server" AutoGenerateColumns="False">
-                <Columns>
-                    <asp:BoundField DataField="Users" HeaderText="用户名" SortExpression="Users" />
-                    <asp:BoundField DataField="Pwds" HeaderText="密码" SortExpression="Pwds" />
-                </Columns>
-            </asp:GridView>
+            <asp:GridView ID="GridViewUsers" runat="server" AutoGenerateColumns="False"
+				OnRowEditing="GridViewUsers_RowEditing" OnRowUpdating="GridViewUsers_RowUpdating" 
+				OnRowCancelingEdit="GridViewUsers_RowCancelingEdit" OnRowDeleting="GridViewUsers_RowDeleting" >
+    <Columns>
+
+        <asp:TemplateField HeaderText="用户名">
+            <ItemTemplate>
+                <asp:Label ID="LabelUsername" runat="server" Text='<%# Eval("Users") %>'></asp:Label>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="TextBoxUsername" runat="server" Text='<%# Bind("Users") %>'></asp:TextBox>
+            </EditItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField HeaderText="密码">
+            <ItemTemplate>
+                <asp:Label ID="LabelPassword" runat="server" Text='<%# Eval("Pwds") %>'></asp:Label>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="TextBoxPassword" runat="server" Text='<%# Bind("Pwds") %>'></asp:TextBox>
+            </EditItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField HeaderText="选项">
+            <ItemTemplate>
+                <asp:LinkButton ID="LinkButtonEdit" runat="server" CausesValidation="False" 
+					CommandName="Edit" Text="编辑"></asp:LinkButton>
+                <asp:LinkButton ID="LinkButtonDelete" runat="server" CausesValidation="False" 
+					CommandName="Delete" Text="删除" OnClientClick="return confirmDelete();"></asp:LinkButton>
+				<asp:LinkButton ID="LinkButtonAdd" runat="server" CausesValidation="False"
+                    CommandName="Add" Text="新增"></asp:LinkButton>
+			</ItemTemplate>
+            <EditItemTemplate>
+                <asp:LinkButton ID="LinkButtonUpdate" runat="server" CausesValidation="True" CommandName="Update" Text="更新"></asp:LinkButton>
+                <asp:LinkButton ID="LinkButtonCancel" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消"></asp:LinkButton>
+            </EditItemTemplate>
+        </asp:TemplateField>
+    </Columns>
+</asp:GridView>
+		   <script type="text/javascript">
+				function confirmDelete() {
+					return confirm("确认要删除吗？");
+				}
+           </script>
+
         </div>
 &nbsp;</div>
 
@@ -143,5 +179,6 @@
     </form>
 </body>
 </html>
+
 
 

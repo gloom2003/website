@@ -10,9 +10,9 @@ public partial class admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["us"] != null)
+        if (Session["user"] != null)
         {
-            Label3.Text = "欢迎" + Session["us"].ToString() + "用户进行在线考试！";
+            Label3.Text = "欢迎" + Session["user"].ToString() + "用户进行在线考试！";
             Label4.Text = "现在时间为：" + DateTime.Now.ToString();
         }
         else {

@@ -38,7 +38,7 @@
             text-align:center;
         }
         #Label3{
-            margin-left: 500px;
+            margin-left: 100px;
         }
         #Label4{
             margin-left: 50px;
@@ -46,6 +46,7 @@
     </style>
 </head>
 <body>
+        <form id="form1" runat="server">
              <asp:Label ID="Label3" runat="server"></asp:Label>
 &nbsp;
             <asp:Label ID="Label4" runat="server"></asp:Label>
@@ -65,7 +66,6 @@
 		      </div>
 	     </div>
 
-    <form id="form1" runat="server">
                 <div>
             <br />
             <br />
@@ -73,7 +73,7 @@
         <asp:Panel ID="Panel1" runat="server" GroupingText="答题环节">
             <h2>一、单选题(一题20分)：</h2>
             <div class="question">
-                <asp:Label ID="lblQuestion1" runat="server" Text="1.下面哪一个是2的倍数 D" AssociatedControlID="rblOptions1"></asp:Label>
+                <asp:Label ID="lblQuestion1" runat="server" Text="1.下面哪一个是2的倍数: D" AssociatedControlID="rblOptions1"></asp:Label>
                 <br />
                 <asp:RadioButtonList ID="rblOptions1" runat="server" RepeatDirection="Horizontal">
                     <asp:ListItem Text="A. 1" Value="A"></asp:ListItem>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="question">
-                <asp:Label ID="Label1" runat="server" Text="2.XHTML中换行的元素是( ) B" AssociatedControlID="RadioButtonList1"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="2.XHTML中换行的元素是( ): B" AssociatedControlID="RadioButtonList1"></asp:Label>
                 <br />
                 <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
                     <asp:ListItem Text="A. p" Value="A"></asp:ListItem>

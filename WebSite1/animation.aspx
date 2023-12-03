@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>海盗船动画</title>
+    <link rel="stylesheet" href="css/directory.css"/>
     <style>
         *{
             margin: 0;
@@ -77,24 +78,45 @@
             bottom: 40px;
             animation: fish 3s infinite;
         }
+        #Main{
+            position:absolute;
+            left:400px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="bg">
-            <img src="images/bg.png" alt="图片加载失败">
-        </div>
-        <div class="ship">
-            <img class="ship" src="images/ship.png" alt="图片加载失败">
-        </div>
-        <div class="fish">
-            <img src="images/fish.png" alt="图片加载失败">
-        </div>
-        <div class="waves">
-            <img class="wave3" src="images/wave3.png" alt="图片加载失败">
-            <img class="wave2" src="images/wave2.png" alt="图片加载失败">
-            <img class="wave1" src="images/wave1.png" alt="图片加载失败">
-        </div>
+    <form id="form1" runat="server">
+        <div id="Main">
+		  <div id="Nav">
+			<ul>
+			  <li><a href="showNews.aspx">新闻展示</a></li>
+			  <li><a href="testOnline.aspx">在线答题</a></li>
+			  <li><a href="adminManage.aspx">后台管理</a></li>
+			  <li><a href="issueNews.aspx">发布新闻</a></li>
+			  <li><a href="animation.aspx">观看动画</a></li>
+			  <li><a href="index.aspx">返回首页</a></li>
+			  <li><a href="#">留下足迹</a></li>
+			</ul>
+		  </div>
+	    </div>
+
+        <div class="container">
+            <div class="bg">
+                <img src="images/bg.png" alt="图片加载失败">
+            </div>
+            <div class="ship">
+                <img class="ship" src="images/ship.png" alt="图片加载失败">
+            </div>
+            <div class="fish">
+                <img src="images/fish.png" alt="图片加载失败">
+            </div>
+            <div class="waves">
+                <img class="wave3" src="images/wave3.png" alt="图片加载失败">
+                <img class="wave2" src="images/wave2.png" alt="图片加载失败">
+                <img class="wave1" src="images/wave1.png" alt="图片加载失败">
+            </div>
     </div>
+    </form>
+    
 </body>
 </html>
