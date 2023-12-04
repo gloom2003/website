@@ -49,7 +49,7 @@
         }
 		.bgPic{
 			position:absolute;
-			bottom:100px;
+			bottom:99px;
 			left:347px;
 			width:798px;
 			height:600px;

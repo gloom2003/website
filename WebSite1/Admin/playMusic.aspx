@@ -81,24 +81,26 @@
             }
         }
         .box{
-            width: 400px;
-            height: 400px;
+			position:absolute;
+			right:50px;
+			top:30px;
+            width: 200px;
+            height: 200px;
             margin: 20px auto;
             border-radius: 50%;
             overflow: hidden;
             animation: rotate 10s linear infinite;
         }
         .box>img{
-            width: 500px;
-            height: 500px;
-			transform:translate(0px,0px);
+            width: 300px;
+            height: 300px;
         }
         .box:hover{
             animation-play-state: paused;
         }
         audio{
             /* 音乐播放器直接使用位移变化位置 */
-            transform: translate(570px,0px);
+            transform: translate(1170px,150px);
         }
 		#bottomText{
 			width:799px;

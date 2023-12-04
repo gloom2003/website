@@ -110,7 +110,7 @@
 			</ul>
 		</div>
   <div id="Pic">
-	  <img src="../images/logo.png" style="width:800px;height:200px"/>
+	  <img src="../images/校训.jpg" style="width:800px;height:200px"/>
   </div>
 
   <div id="Txt"> 
