@@ -9,14 +9,11 @@ public partial class Jgsz_News : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["OnlineUsers"] != null) {
-            int onlineUserCount = ((List<string>)Session["OnlineUsers"]).Count;
+        
+        if (Application["online"] != null) {
+            int onlineUserCount = Int32.Parse(Application["online"].ToString());
 
-            Label1.Text = "当前登录人数：" + onlineUserCount + "人";
-        }
-        else
-        {
-            Label1.Text = "当前登录人数：0人";
+            Label1.Text = "当前在线人数：" + onlineUserCount + "人";
         }
     }
 
@@ -24,36 +21,18 @@ public partial class Jgsz_News : System.Web.UI.Page
     {
             if (Session["user"] != null)
             {
-                UserLogout((string)Session["user"]);
-                Response.Redirect("index.aspx");
+                // 清除session
+                Session.Abandon();
+                Label2.Text = "注销成功，现在是未登录状态！";
             }
             else
             {
-                Label2.Text = "还没有登录！";
+                Label2.Text = "你还没有登录！";
             }
         
         
     }
 
 
-    // 在用户注销时将其从在线用户列表中移除
-    protected void UserLogout(string username)
-    {
-        List<string> onlineUsers;
 
-        if (Session["OnlineUsers"] != null)
-        {
-            onlineUsers = (List<string>)Session["OnlineUsers"];
-
-            // 移除用户
-            onlineUsers.Remove(username);
-
-            // 更新Session中的在线用户列表
-            Session["OnlineUsers"] = onlineUsers;
-        }
-        else
-        {
-            Label2.Text = "还没有登录！";
-        }
-    }
 }

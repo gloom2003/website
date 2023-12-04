@@ -15,6 +15,7 @@ public partial class Login : System.Web.UI.Page
         } else if ("false".Equals(Session["isAdmin"])) {
             Label1.Text = "只有使用管理员账号才能够使用后台管理功能！";
         }
+        
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ public partial class Login : System.Web.UI.Page
         if (sdr.HasRows)
         {
             Session["user"] = user;// 向session中存储用户信息
-            UserLogin(user);
+            
             Session["password"] = pwd;
             Session["isLogin"] = "true";
             if ("admin".Equals(user)) {
@@ -53,23 +54,5 @@ public partial class Login : System.Web.UI.Page
         }
     }
 
-    protected void UserLogin(string username)
-    {
-        List<string> onlineUsers;
 
-        if (Session["OnlineUsers"] == null)
-        {
-            onlineUsers = new List<string>();
-        }
-        else
-        {
-            onlineUsers = (List<string>)Session["OnlineUsers"];
-        }
-
-        // 添加新用户到列表中
-        onlineUsers.Add(username);
-
-        // 更新Session中的在线用户列表
-        Session["OnlineUsers"] = onlineUsers;
-    }
 }
