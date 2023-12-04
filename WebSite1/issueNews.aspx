@@ -40,8 +40,9 @@
     <style>
         #bottomText{
             position:absolute;
+            width:820px;
             bottom:10px;
-            left: 300px;
+            left: 340px;
             text-align:center;
             background-color: #666;
         }
@@ -110,8 +111,7 @@
                   </p> 
                   <p>
                     五邑大学党政办：(0750)3296113  传真：(0750)3358395    招生咨询  全日制本科招生咨询：(0750)3296263 
-                  </p>
-                  当前在线人数：?人  
+                  </p> 
               
               </div>
 </div>

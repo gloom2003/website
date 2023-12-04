@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="editNews.aspx.cs" Inherits="Admin_S_User" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="playMusic.aspx.cs" Inherits="Admin_S_User" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,6 @@
 <head runat="server">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link rel="stylesheet" href="css/directory.css"/>
         <style type="text/css">
 #Main {
 	margin: auto;
@@ -45,7 +44,7 @@
 }
 #Main #Nav ul li {
 	height: 40px;
-	width: 100px;
+	width: 114px;
 	float: left;
 	font-family: "微软雅黑";
 	font-size: 16px;

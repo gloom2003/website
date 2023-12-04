@@ -80,7 +80,7 @@
         }
         #Main{
             position:absolute;
-            left:400px;
+            left:350px;
         }
     </style>
 </head>

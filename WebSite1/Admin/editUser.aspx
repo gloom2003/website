@@ -47,7 +47,7 @@
 }
 #Main #Nav ul li {
 	height: 40px;
-	width: 100px;
+	width: 114px;
 	float: left;
 	font-family: "微软雅黑";
 	font-size: 16px;
@@ -82,6 +82,14 @@
 		#title{
 			transform:translate(-250px,0px);
 		}
+		#bottomText{
+			width:820px;
+            position:absolute;
+            bottom:10px;
+            left: 340px;
+            text-align:center;
+            background-color: #666;
+        }
     </style>
 
 
@@ -171,7 +179,15 @@
 &nbsp;</div>
 
 
-  <div id="Foot">此处显示  id "Foot" 的内容00000000000000000000000000000</div>
+			<div id="bottomText">
+                  <p>
+                    版权所有©五邑大学   地址：广东省江门市蓬江区迎宾大道中99号   邮编：529020  
+                  </p> 
+                  <p>
+                    五邑大学党政办：(0750)3296113  传真：(0750)3358395    招生咨询  全日制本科招生咨询：(0750)3296263 
+                  </p> 
+              
+              </div>
 </div>
         
         
