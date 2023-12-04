@@ -26,7 +26,7 @@
 			      <li><a href="issueNews.aspx">发布新闻</a></li>
 			      <li><a href="animation.aspx">观看动画</a></li>
 			      <li><a href="index.aspx">返回首页</a></li>
-			      <li><a href="#">留下足迹</a></li>
+			      <li><a href="/Admin/playMusic.aspx">强军战歌</a></li>
 			    </ul>
 		      </div>
 	    </div>
