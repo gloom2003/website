@@ -44,7 +44,7 @@
 }
 #Main #Nav ul li {
 	height: 40px;
-	width: 100px;
+	width: 114px;
 	float: left;
 	font-family: "微软雅黑";
 	font-size: 16px;
