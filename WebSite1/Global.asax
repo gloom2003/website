@@ -5,7 +5,7 @@
     void Application_Start(object sender, EventArgs e)
     {
         // 在应用程序启动时运行的代码
-        Application.Add("online", 1);
+        Application.Add("online", 0);
     }
    
     void Application_End(object sender, EventArgs e)
